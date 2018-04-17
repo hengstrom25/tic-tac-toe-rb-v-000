@@ -14,13 +14,13 @@ WIN_COMBINATIONS =
     
  def won?(board)
   WIN_COMBINATIONS.each do |line|
-  if (board[line[0]]) == "X" && (board[line[1]]) == "X" && (board[line[2]]) == "X"
-    return line
+    if (board[line[0]]) == "X" && (board[line[1]]) == "X" && (board[line[2]]) == "X"
+      return line
     elsif (board[line[0]]) == "O" && (board[line[1]]) == "O" && (board[line[2]]) == "O"
-    return line
- end
-end
-false
+      return line
+    end
+  end
+  false
 end
 
 def full?(board)
