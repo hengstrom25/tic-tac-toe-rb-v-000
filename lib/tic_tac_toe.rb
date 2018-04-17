@@ -38,14 +38,14 @@ def over?(board)
   if won?(board) || full?(board) || draw?(board)
     return true
   end
-  false
+  nil
 end
 
 def winner(board)
   if won?(board)
     return board[won?(board)[0]]
   end
-  false
+  nil
 end
 
 def display_board(board)
