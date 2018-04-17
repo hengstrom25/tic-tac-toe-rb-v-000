@@ -111,10 +111,8 @@ end
  current_player(board) 
  
  def play(board)
-  counter = 0
-    until counter >= 9
+  over?(board) do
     puts turn(board)
-    counter += 1
     end
   end
  
