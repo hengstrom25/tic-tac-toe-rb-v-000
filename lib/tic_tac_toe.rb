@@ -45,6 +45,7 @@ def winner(board)
   if won?(board)
     return board[won?(board)[0]]
   end
+  false
 end
 
 def display_board(board)
@@ -71,12 +72,14 @@ def position_taken?(board, index)
   elsif board[index] == " " || board[index] == "" || board[index] == "nil"
     false
   end
+  false
 end
 
 def valid_move?(board, index)
   if position_taken?(board, index) == false && (index).between?(0, 8) == true
     true
   end
+  false
 end
 
 def turn(board)
@@ -91,16 +94,15 @@ def turn(board)
   end
 end
 
-  def turn_count(board)
+def turn_count(board)
   counter = 0
   board.each do |turn|
-  if turn == "X" || turn == "O"
-  counter += 1
-  puts "#{counter}"
+    if turn == "X" || turn == "O"
+      counter += 1
+      puts "#{counter}"
+    end
   end
-end
-
-counter
+  counter
 end
 
 def current_player(board)
