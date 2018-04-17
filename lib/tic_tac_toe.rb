@@ -31,12 +31,14 @@ def draw?(board)
   if !won?(board) && full?(board)
     return true
   end
+  false
 end
 
 def over?(board)
   if won?(board) || full?(board) || draw?(board)
     return true
   end
+  false
 end
 
 def winner(board)
